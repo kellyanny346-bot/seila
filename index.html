@@ -1,0 +1,547 @@
+Single File HTML Conversion
+
+
+Crie o código completo (HTML5 e CSS3 em um arquivo único).O código deve ser responsivo para celular.Entregue APENAS UM BLOCO de código contendo o HTML com o CSS interno na tag style e o JS na tag script.
+
+
+Thought for 2s
+
+
+
+
+Analyzed
+otiefrep-oiehcer-mu\sotnemucoD\evirDenO\yllek\sresU\:c
+
+Thought for 1s
+
+
+
+
+Analyze Existing Project
+Read index.tsx and found no CSS imports. Now checking index.html for global CSS or Tailwind configuration.
+
+Progress Updates
+1
+Reading project files
+
+2
+Reading component files to extract content and logic
+
+3
+Checking for CSS definitions in index.tsx
+
+4
+Checking index.html for CSS links
+
+Plan Single File Conversion
+Analyzed project files and extracted all necessary content (colors, fonts, structure, data). Now creating implementation plan to convert React components to a single HTML file with embedded CSS and Vanilla JS.
+
+Files Edited
+Implementation Plan
+Progress Updates
+1
+Creating implementation plan
+
+I have analyzed your project and created a plan to convert it into a single HTML file. I will combine all React components into one HTML structure, use Tailwind via CDN for styling (matching your current design), and replace React logic with simple Vanilla JS. Please review the plan so I can proceed to generate the code.
+
+Implementation Plan
+Open
+Crie o código completo (HTML5 e CSS3 em um arquivo único).O código deve ser responsivo para celular.Entregue APENAS UM BLOCO de código contendo o HTML com o CSS interno na tag style e o JS na tag script.
+
+
+Thought Process
+
+
+
+
+
+
+
+
+
+Thought for 96s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Edited
+landing_page.html
++424
+-0
+
+Thought for 8s
+
+
+
+
+
+
+
+
+Aqui está o código completo em um único arquivo, responsivo e com todas as funcionalidades integradas.
+
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Recheio Perfeito - Gourmet Pop</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN para funcionamento em arquivo único) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hotpink: '#FF1493',
+                        coral: '#FF7F50',
+                        chocolate: '#3D2B1F',
+                        cream: '#FFF5F5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        html { scroll-behavior: smooth; }
+        
+        /* Animações personalizadas caso necessário, mas Tailwind cobre a maioria */
+    </style>
+</head>
+<body class="bg-cream text-chocolate selection:bg-hotpink selection:text-white">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 py-4 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex justify-between items-center w-full md:w-auto">
+                <a href="#" id="nav-logo" class="serif text-xl md:text-2xl font-bold transition-colors text-white">
+                    Um Recheio Perfeito
+                </a>
+                <a href="#agendar" class="md:hidden bg-hotpink text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
+                    AGENDAR
+                </a>
+            </div>
+            
+            <div class="flex items-center space-x-4 md:space-x-8 text-sm md:text-base">
+                <a href="#sobre-nós" class="nav-link font-semibold hover:text-coral transition-colors whitespace-nowrap text-white drop-shadow-md">Sobre Nós</a>
+                <a href="#preços" class="nav-link font-semibold hover:text-coral transition-colors whitespace-nowrap text-white drop-shadow-md">Preços</a>
+                <a href="#localização" class="nav-link font-semibold hover:text-coral transition-colors whitespace-nowrap text-white drop-shadow-md">Localização</a>
+                <a href="#agendar" class="hidden md:block bg-hotpink text-white px-6 py-2 rounded-full font-bold hover:bg-coral transition-all transform hover:scale-105 shadow-lg">
+                    AGENDAR
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero -->
+    <section class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div 
+            class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 hover:scale-105"
+            style="background-image: url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=2000&auto=format&fit=crop');"
+        ></div>
+        
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <!-- Hero Content -->
+        <div class="relative z-20 text-center text-white px-4 max-w-5xl">
+            <h1 class="serif text-5xl md:text-9xl font-black mb-8 drop-shadow-2xl tracking-tight leading-tight">
+                Um Recheio Perfeito
+            </h1>
+            
+            <!-- Subtitle -->
+            <div class="flex items-center justify-center gap-4 mb-10 sm:mb-12">
+                <div class="h-[1px] w-8 md:w-24 bg-white/50"></div>
+                <p class="text-sm md:text-2xl font-semibold tracking-[0.2em] uppercase whitespace-nowrap drop-shadow-lg">
+                    Agendamento Horário
+                </p>
+                <div class="h-[1px] w-8 md:w-24 bg-white/50"></div>
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+                <a 
+                    href="#preços"
+                    class="w-full sm:w-auto bg-hotpink text-white px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all transform hover:scale-105 shadow-xl hover:shadow-hotpink/20"
+                >
+                    Explorar Catálogo
+                </a>
+                <a 
+                    href="#agendar"
+                    class="w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/40 px-6 py-3 sm:px-10 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:bg-white/20"
+                >
+                    Fazer Pedido
+                </a>
+            </div>
+        </div>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+            <svg class="w-8 h-8 text-white opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+    <!-- Menu (Products) -->
+    <section id="preços" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="serif text-4xl md:text-6xl text-hotpink font-bold mb-4">O protagonista da festa</h2>
+                <p class="text-chocolate/60 text-lg max-w-2xl mx-auto">
+                    Uma seleção impecável de doces gourmet e salgados artesanais, preparados para despertar seu desejo imediato.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599599810694-b5b37304c041?q=80&w=800&auto=format&fit=crop" alt="Brigadeiro Gourmet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Brigadeiro Gourmet</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Feito com chocolate belga e granulado premium.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 4,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?q=80&w=800&auto=format&fit=crop" alt="Beijinho Gourmet" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Beijinho Gourmet</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Coco fresco ralado e leite condensado de primeira.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 4,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop" alt="Bolo Inteiro (Pequeno)" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Bolo Inteiro (Pequeno)</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Até 10 fatias. Massa fofinha e recheio generoso.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 60,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1543255006-d6395b6f1171?q=80&w=800&auto=format&fit=crop" alt="Brownie Tradicional" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Brownie Tradicional</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Casquinha crocante e interior super úmido.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 8,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800&auto=format&fit=crop" alt="Coxinha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Coxinha</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Recheio de frango suculento e massa de batata.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 7,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop" alt="Pastel Assado" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Pastel Assado</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Diversos sabores, massa leve e crocante.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 8,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="group bg-cream rounded-3xl overflow-hidden border border-cream hover:border-hotpink/20 transition-all duration-500 hover:shadow-2xl flex flex-col h-full">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=800&auto=format&fit=crop" alt="Enroladinho de Salsicha" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="serif text-2xl font-bold mb-2 text-chocolate group-hover:text-hotpink transition-colors">Enroladinho de Salsicha</h3>
+                        <p class="text-chocolate/70 text-sm mb-6 flex-grow">Massa macia e saborosa, o clássico das festas.</p>
+                        <div class="flex justify-between items-center pt-4 border-t border-chocolate/5">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-chocolate/40 uppercase tracking-widest">Unidade</span>
+                                <span class="text-2xl font-black text-chocolate">R$ 6,00</span>
+                            </div>
+                            <button class="bg-chocolate text-white p-3 rounded-xl group-hover:bg-hotpink transition-all">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Info (About, Location, Hours) -->
+    <section id="sobre-nós" class="py-24 bg-cream overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- About -->
+                <div class="lg:w-1/2">
+                    <h2 class="serif text-4xl md:text-5xl font-bold text-chocolate mb-6">
+                        Amor em cada recheio
+                    </h2>
+                    <div class="w-20 h-1.5 bg-coral mb-8 rounded-full"></div>
+                    <p class="text-lg text-chocolate/80 mb-6 leading-relaxed">
+                        No <span class="font-bold text-hotpink">Um Recheio Perfeito</span>, acreditamos que a confeitaria é uma forma de arte que deve ser saboreada com todos os sentidos. Nosso foco é o produto final perfeito: estética "Gourmet Pop" aliada ao sabor inesquecível do chocolate real.
+                    </p>
+                    <p class="text-lg text-chocolate/80 mb-10 leading-relaxed">
+                        Cada brigadeiro, brownie e salgado é produzido com ingredientes selecionados, garantindo uma experiência suculenta e visualmente irresistível. Nos dedicamos a transformar cada pedido em um momento de celebração único para nossos clientes.
+                    </p>
+                </div>
+                <!-- Location & Hours -->
+                <div id="localização" class="lg:w-1/2 w-full grid grid-cols-1 gap-8">
+                    <div class="bg-chocolate text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-coral/20 rounded-full -mr-10 -mt-10 transition-transform group-hover:scale-150 duration-700"></div>
+                        
+                        <div class="relative z-10">
+                            <h3 class="serif text-3xl font-bold mb-8 flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                                Localização
+                            </h3>
+                            <p class="text-xl mb-2 opacity-90">Alameda Jauaperi, 213</p>
+                            <p class="text-lg opacity-70 mb-10">Indianópolis, São Paulo – SP<br/>CEP: 04523-010</p>
+                            <h3 class="serif text-3xl font-bold mb-8 flex items-center">
+                                <svg class="w-8 h-8 mr-3 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                Horários
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex justify-between border-b border-white/10 pb-2">
+                                    <span class="opacity-70">Segunda a Sexta</span>
+                                    <span class="font-bold">08h00 às 18h00</span>
+                                </div>
+                                <div class="flex justify-between border-b border-white/10 pb-2">
+                                    <span class="opacity-70">Sábado</span>
+                                    <span class="font-bold">08h00 às 14h00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="opacity-70 text-coral font-bold">Domingo e Feriados</span>
+                                    <span class="text-coral font-bold">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="agendar" class="bg-hotpink p-10 rounded-[3rem] text-white flex flex-col items-center justify-center text-center">
+                        <h3 class="serif text-3xl font-bold mb-4 italic">Ficou com água na boca?</h3>
+                        <p class="mb-8 opacity-90">Agende agora seu pedido e garanta o melhor recheio para o seu dia.</p>
+                        <a 
+                            href="https://wa.me/5521983645358"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="bg-white text-hotpink px-10 py-4 rounded-full font-black text-xl hover:bg-chocolate hover:text-white transition-all transform hover:scale-105 shadow-xl"
+                        >
+                            AGENDAR AGORA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-chocolate text-white py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div>
+                <h3 class="serif text-2xl font-bold text-hotpink mb-4">Um Recheio Perfeito</h3>
+                <p class="opacity-60 text-sm">
+                    Especialistas em criar momentos doces e inesquecíveis com estética gourmet e sabor de verdade.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-coral">Contato</h4>
+                <ul class="space-y-2 text-sm opacity-80">
+                    <li>(21) 983645358</li>
+                    <li>kellyanny346@gmail.com</li>
+                    <li>São Paulo – SP</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-coral">Redes Sociais</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-hotpink transition-colors">Instagram</a>
+                    <a href="#" class="hover:text-hotpink transition-colors">Facebook</a>
+                    <a href="#" class="hover:text-hotpink transition-colors">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/10 text-center opacity-40 text-xs">
+            © 2025 Um Recheio Perfeito. Todos os direitos reservados.
+        </div>
+    </footer>
+    <!-- WhatsApp Button -->
+    <a 
+        href="https://wa.me/5521983645358"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all animate-bounce hover:animate-none"
+        aria-label="Contato via WhatsApp"
+    >
+        <svg class="w-7 h-7 md:w-8 md:h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.82l.303.18c1.397.831 3.013 1.27 4.673 1.27 5.033 0 9.13-4.097 9.13-9.134 0-2.439-.949-4.732-2.67-6.453s-4.014-2.67-6.453-2.672c-5.033 0-9.13 4.097-9.13 9.134.001 1.738.499 3.426 1.446 4.888l.198.306-1.001 3.655 3.743-.982z"/>
+        </svg>
+    </a>
+    <script>
+        // Navbar Scroll Logic
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                // Scrolled style
+                navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                navbar.classList.remove('bg-transparent', 'py-4');
+                
+                navLogo.classList.remove('text-white');
+                navLogo.classList.add('text-hotpink');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white', 'drop-shadow-md');
+                    link.classList.add('text-chocolate');
+                });
+            } else {
+                // Top style
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'py-2');
+                navbar.classList.add('bg-transparent', 'py-4');
+                
+                navLogo.classList.add('text-white');
+                navLogo.classList.remove('text-hotpink');
+                
+                navLinks.forEach(link => {
+                    link.classList.add('text-white', 'drop-shadow-md');
+                    link.classList.remove('text-chocolate');
+                });
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initial check
+        handleScroll();
+    </script>
+</body>
+</html>
+Good
+Bad
+
+
+
+Add context
+Images
+Mentions
+Workflows
+
+Conversation mode
+Planning
+Agent can plan before executing tasks. Use for deep research, complex tasks, or collaborative work
+Fast
+Agent will execute tasks directly. Use for simple tasks that can be completed faster
+
+Gemini 3 Pro (High)
+
+Model
+
+
+
+
+
+
+
+You can upgrade to a Google AI plan to receive higher rate limits.
+View plans
+
